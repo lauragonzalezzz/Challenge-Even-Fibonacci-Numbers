@@ -5,13 +5,13 @@
  * @param  {Number} maxFibValue
  * @return {Number} sum
  */
- var fibArray = [];
+ 
 
 function _sumFibs( maxFibValue ) {
-  var sum = 0;
   var firstNum = 0;
   var secondNum = 1;
   var a;
+  var fibArray = [];
 
   for (var i = 0; maxFibValue > secondNum; i++) {
     a = firstNum;
@@ -21,15 +21,17 @@ function _sumFibs( maxFibValue ) {
       fibArray.push(secondNum);
     }
   }
-  addEvens(fibArray);
-  return 'The sum of the all the even fib numbers up to ' + maxFibValue + ' is ' + sum;
+  console.log(fibArray);
+  return addEvens(fibArray);
 }
 
 function addEvens(arr) {
+  var sum = 0;
   for (var i = 0; i < arr.length; i++) {
     sum += arr[i];
   }
-}
+    return sum;
+  }
 
 
 // bonus round
