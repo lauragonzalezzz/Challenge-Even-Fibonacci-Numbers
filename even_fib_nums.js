@@ -21,7 +21,6 @@ function _sumFibs( maxFibValue ) {
       fibArray.push(secondNum);
     }
   }
-  console.log(fibArray);
   return addEvens(fibArray);
 }
 
@@ -37,14 +36,19 @@ function addEvens(arr) {
 // bonus round
 function _highestFibonacciNumber (maxFibValue){
   var highest = 0;
+  var firstNum = 0;
+  var secondNum = 1;
+  var a;
 
-  //define your base case, validate your input
-
-
-  //do your work here
-
+  for (var i = 0; maxFibValue > secondNum; i++) {
+    a = firstNum;
+    firstNum = secondNum;
+    secondNum += a;
+    highest = firstNum;
+    
+}
   return highest;
-};
+}
 
 /**
  * Do not modify code below.
